@@ -5,10 +5,9 @@
 version: "3.9"
 services:
   gdalcog:
-    # build: 
-    #   context: .
-    #   dockerfile: .
-    image: osgeo/gdal:alpine-small-3.3.2
+    build: 
+      context: .
+      dockerfile: ./io/Dockerfile
     # ports:
     #   - 3001:5000
     container_name: gdalcog
