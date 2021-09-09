@@ -1,0 +1,16 @@
+# container to create a cloud optimized geotiff
+# which is only available on more recent gdal versions
+# which in turn are only available on ubuntu 18+
+
+version: "3.9"
+services:
+  gdalcog:
+    # build: 
+    #   context: .
+    #   dockerfile: .
+    image: osgeo/gdal:alpine-small-3.3.2
+    # ports:
+    #   - 3001:5000
+    container_name: gdalcog
+    volumes:
+      - ./io:/io:cached
